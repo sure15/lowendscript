@@ -291,7 +291,7 @@ function install_wordpress {
 
     # Downloading the WordPress' latest and greatest distribution.
     mkdir /tmp/wordpress.$$
-    wget -O - http://wordpress.org/latest.tar.gz | \
+    wget --no-check-certificate -O - http://wordpress.org/latest.tar.gz | \
         tar zxf - -C /tmp/wordpress.$$
     mv /tmp/wordpress.$$/wordpress "/var/www/$1"
     rm -rf /tmp/wordpress.$$
